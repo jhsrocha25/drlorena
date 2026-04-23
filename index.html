@@ -16,6 +16,23 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1404174834810727');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1404174834810727&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -25,7 +42,7 @@
             <div class="logo">
                 <img src="logo.png" alt="Dra. Lorena Cunha Lira Cruz" class="logo-img">
             </div>
-            <a href="https://wa.me/5538998449093" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 1rem;">
+            <a href="https://wa.me/5538998449093" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 1rem;" onclick="fbq('track', 'Lead'); fbq('trackCustom', 'CliqueAgendarTopo');">
                 Agendar Consulta
             </a>
         </div>
@@ -43,7 +60,7 @@
             <h1>Cuidando da mente e do desenvolvimento do seu filho com atenção especializada</h1>
             <p>Pediatria com foco em saúde mental infantil, TEA, TDAH e transtornos psiquiátricos</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/5538998449093" target="_blank" class="btn btn-primary">
+                <a href="https://wa.me/5538998449093" target="_blank" class="btn btn-primary" onclick="fbq('track', 'Contact'); fbq('trackCustom', 'CliqueWhatsApp');">
                     👉 Agendar consulta
                 </a>
                 <a href="#pediatria" class="btn btn-secondary">
@@ -358,7 +375,7 @@
                 <h2 class="section-title" style="margin-bottom: 0.5rem;">Pronto para transformar o futuro do seu filho?</h2>
                 <p style="margin-bottom: 2rem; font-size: 1.1rem;">Atendimento humanizado e especializado. Agende uma avaliação.</p>
                 
-                <a href="https://wa.me/5538998449093" target="_blank" class="btn btn-primary" style="font-size: 1.25rem; padding: 1.25rem 2.5rem; width: 100%;">
+                <a href="https://wa.me/5538998449093" target="_blank" class="btn btn-primary" style="font-size: 1.25rem; padding: 1.25rem 2.5rem; width: 100%;" onclick="fbq('track', 'Lead'); fbq('trackCustom', 'CliqueAgendarFinal');">
                     <i class="ph-fill ph-whatsapp-logo" style="font-size: 1.8rem;"></i>
                     Agende uma avaliação especializada
                 </a>
@@ -378,7 +395,7 @@
     </footer>
 
     <!-- Fixed WhatsApp Button -->
-    <a href="https://wa.me/5538998449093" target="_blank" class="whatsapp-btn" aria-label="Falar no WhatsApp">
+    <a href="https://wa.me/5538998449093" target="_blank" class="whatsapp-btn" aria-label="Falar no WhatsApp" onclick="fbq('track', 'Contact'); fbq('trackCustom', 'CliqueWhatsApp');">
         <i class="ph-fill ph-whatsapp-logo"></i>
     </a>
 
