@@ -9,13 +9,16 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" as="style">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap">
+    </noscript>
     
     <!-- Phosphor Icons -->
     <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
     
     <!-- Preloads for Performance -->
-    <link rel="preload" as="video" type="video/mp4" href="video novo medica .mp4">
     <link rel="preload" as="image" href="logo.png">
     
     <!-- Custom CSS -->
@@ -55,7 +58,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <!-- Video Background -->
-        <video class="hero-video" autoplay loop muted playsinline>
+        <video class="hero-video" autoplay loop muted playsinline fetchpriority="low">
             <source src="video novo medica .mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
@@ -404,10 +407,10 @@
     </a>
 
     <!-- GSAP for Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <!-- Custom Script -->
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
 </body>
 </html>
