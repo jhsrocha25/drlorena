@@ -73,9 +73,24 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <!-- Video Background -->
-        <video class="hero-video" autoplay loop muted playsinline poster="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'><rect width='1' height='1' fill='%23111'/></svg>">
+        <video id="heroVideo" class="hero-video" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" style="background-color: #111;">
             <source src="video_novo_medica.mp4" type="video/mp4">
         </video>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var v = document.getElementById('heroVideo');
+                if (v) {
+                    v.muted = true;
+                    v.setAttribute('playsinline', '');
+                    var playPromise = v.play();
+                    if (playPromise !== undefined) {
+                        playPromise.catch(function(error) {
+                            console.log("Autoplay prevented:", error);
+                        });
+                    }
+                }
+            });
+        </script>
         <div class="hero-overlay"></div>
         
         <div class="hero-content gs-reveal">
