@@ -704,3 +704,10 @@ footer {
     width: 100%;
   }
 }
+
+/* Fix iOS Low Power Mode Video Play Button Overlay */
+.hero-video::-webkit-media-controls,
+.hero-video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
+}
